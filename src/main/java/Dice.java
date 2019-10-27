@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Dice {
 
-    public Integer rollDice(){
+    public Integer rollDice(Integer numberOfDice){
         Integer diceRoll1 = rollOneDie();
         Integer diceRoll2 = rollOneDie();
 

@@ -13,7 +13,7 @@ public class BinsTest {
         bin.incrementBin(4);
 
         //then
-        Integer actual = bin.returnTally(4);
+        Integer actual = bin.returnBinTally(4);
         assertEquals(expected,actual);
 
     }
@@ -29,7 +29,7 @@ public class BinsTest {
         bin.incrementBin(4);
 
         //then
-        Integer actual = bin.returnTally(4);
+        Integer actual = bin.returnBinTally(4);
         assertEquals(expected,actual);
 
 

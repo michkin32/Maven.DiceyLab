@@ -12,7 +12,7 @@ public Bins() {
 public void incrementBin(Integer diceRollResult){
     bins[diceRollResult] += 1;
 }
-public Integer returnTally(Integer valueOfIndex){
+public Integer returnBinTally(Integer valueOfIndex){
 
     return bins[valueOfIndex];
 }
