@@ -3,15 +3,17 @@ import java.util.Random;
 public class Dice {
 
     public Integer rollDice(Integer numberOfDice){
-        Integer diceRoll1 = rollOneDie();
-        Integer diceRoll2 = rollOneDie();
+        Integer toss = 0;
+        for (int i = 0; i < numberOfDice; i++) {
+            toss += Dice.rollOneDie();
+        }
 
-        Integer toss = diceRoll1 + diceRoll2;
+
 
         return toss;
     }
 
-    private Integer rollOneDie() {
+    public static Integer rollOneDie() {
         Integer sides = 6;
         Random randomNumber = new Random();
 
