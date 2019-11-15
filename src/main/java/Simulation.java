@@ -28,11 +28,11 @@ public String toString(Bins bin){
             Integer dieroll = bin.bins[i];
             Double average = bin.bins[i]/total;
             if (i <= 9 && dieroll < 100000){
-            finalResult +=" " + " " + i + ":   " + dieroll + ": " + dieroll/total + numberOfstars(average,total) + "\n";
+            finalResult +=" " + " " + i + ":   " + dieroll + ": " + dieroll/total + numberOfstars(average) + "\n";
             }else if (i <= 9 && dieroll > 100000){
-                finalResult += " " +  " " + i + ":  " + dieroll + ": " + dieroll/total + numberOfstars(average,total) + "\n";
+                finalResult += " " +  " " + i + ":  " + dieroll + ": " + dieroll/total + numberOfstars(average) + "\n";
             }else if(i >= 9 && dieroll < 100000){
-                finalResult += " " + i + ":   " + dieroll + ": " + dieroll/total + numberOfstars(average,total) + "\n";
+                finalResult += " " + i + ":   " + dieroll + ": " + dieroll/total + numberOfstars(average) + "\n";
             }
     }
 
@@ -45,7 +45,7 @@ public Double totalRolls(Bins bin){
     }
     return sum;
 }
-public String numberOfstars(Double average, Double total){
+public String numberOfstars(Double average){
     StringBuilder sb = new StringBuilder();
     Integer n = (int) (average * 100);
 
@@ -54,5 +54,10 @@ public String numberOfstars(Double average, Double total){
     }
     return sb.toString();
 }
+public void printResults(){
+    Bins bin1 = runSimulation();
+    String goodString = this.toString(bin1);
+    System.out.print(goodString);
+    }
 
 }
